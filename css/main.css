@@ -1872,13 +1872,25 @@ html[dir="ltr"] .main-img {
 }
 
 html[dir="rtl"] .light-pattern {
-  left: 8.5%;
+  left: 0;
   -webkit-transform: scaleX(-1) translateY(-50%);
           transform: scaleX(-1) translateY(-50%);
 }
 
+@media (min-width: 1500px) {
+  html[dir="rtl"] .light-pattern {
+    left: 8.5%;
+  }
+}
+
 html[dir="ltr"] .light-pattern {
-  right: 8.5%;
+  right: 0;
+}
+
+@media (min-width: 1500px) {
+  html[dir="ltr"] .light-pattern {
+    right: 8.5%;
+  }
 }
 
 @media (max-width: 1199px) {
