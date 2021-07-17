@@ -1667,7 +1667,7 @@ html[dir="ltr"] .main-img {
 @media (max-width: 1199px) {
   .scroll-btn {
     display: block;
-    bottom: 60px;
+    bottom: 75px;
     height: 50px;
     width: 27.5px;
     border-radius: 14px;
