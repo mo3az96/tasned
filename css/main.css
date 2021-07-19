@@ -956,6 +956,14 @@ html[dir="ltr"] .partners-grid {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 767px) {
+  .partner img {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    opacity: 1;
+  }
+}
+
 .services-content {
   display: -ms-grid;
   display: grid;
@@ -1634,7 +1642,7 @@ nav .get-quote::after, nav .get-quote::before {
 .header-icon .text {
   font-size: 26px;
   font-weight: 500;
-  font-family: en;
+  font-family: ar;
 }
 
 html[dir="rtl"] .header-icon .text {
