@@ -1,6 +1,12 @@
+$(window).on('load', function () {
+    if ($(window).width() >= 1500) {
+        numbers(1500)
+    } else {
+        numbers(500)
+    }
+});
 $(document).ready(function () {
     new WOW().init();
-
     //////////** fixed **//////////
     if ($(this).scrollTop() >= 50) {
         $("header").addClass("header-scroll");
@@ -53,9 +59,10 @@ $(document).ready(function () {
     ///////// ** menu ** ///////// 
     $('.menu-icon').click(function () {
         $(".side-menu-section").slideToggle("300", function () {
-            $('.side-menu').toggleClass("active");;
+            $('.side-menu').toggleClass("active");
         });
         $(".header-nav").toggleClass("menu-active");
+        $("header").toggleClass("header-active");
         $(".menu-icon").toggleClass("active");
         $("body").toggleClass("overflow");
     })
@@ -70,4 +77,42 @@ $(document).ready(function () {
             'scrollTop': $target.offset().top - 30
         }, 500, 'swing');
     });
+    ///////// ** file ** ///////// 
+    $("[type=file]").change(function () {
+        var file = $('[type=file]')[0].files[0]
+        if (file) {
+            $(this).siblings("input").val(file.name)
+        }
+    });
+    ///////// ** select2 ** /////////
+    $("select.form-control").select2({
+        minimumResultsForSearch: Infinity
+    });
+    $(window).scroll(function () {
+        if ($(window).width() >= 1500) {
+            numbers(1500)
+        } else {
+            numbers(700)
+        }
+    });
 });
+
+var a = 0;
+function numbers(width) {
+    if ($("div").hasClass("statistics")) {
+        if (a === 0 && $(this).scrollTop() >= ($(".statistics").offset().top) - width) {
+            $('.number span').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 1000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+            a = 1
+        }
+    }
+}
