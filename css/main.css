@@ -127,6 +127,7 @@ body {
   position: relative;
   font-weight: 400;
   background-color: #031e4d;
+  overflow-x: hidden;
 }
 
 html[dir="rtl"] body {
@@ -2394,6 +2395,7 @@ header.header-active .header-icon:hover, header.header-active .header-icon:focus
 
 main {
   position: relative;
+  overflow: hidden;
 }
 
 main .stars {
@@ -2403,6 +2405,7 @@ main .stars {
   -webkit-animation: blinker 5s linear infinite;
           animation: blinker 5s linear infinite;
   z-index: -1;
+  max-width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -5470,6 +5473,64 @@ html[dir="rtl"] .service-feature:nth-of-type(10) {
 
 html[dir="ltr"] .service-feature:nth-of-type(10) {
   left: 8px;
+}
+
+.logo-cover {
+  padding-top: 342px;
+  padding-bottom: 298px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo-cover .work-logo {
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-cover span {
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-cover::after {
+  background-color: #031e4d;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.logo-cover::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(3, 30, 77, 0)), to(#031e4d));
+  background: linear-gradient(0deg, rgba(3, 30, 77, 0) 0%, #031e4d 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 footer {
