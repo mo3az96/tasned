@@ -1,0 +1,55 @@
+.blog-page {
+    padding-top: 259px;
+    padding-bottom: 180px;
+
+    @include md {
+        padding-top: 118px;
+        padding-bottom: 111px;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 73px 0 0;
+
+    .page-item {
+        margin: 0 5px;
+    }
+
+    .page-link {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        color: $text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: all 0.3s ease-in-out;
+
+        &:first-of-type {
+            border-radius: 50%;
+        }
+
+        &:last-of-type {
+            border-radius: 50%;
+        }
+
+        &:hover {
+            color: $main;
+            background-color: transparent;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: $main;
+        }
+
+        @include rtl {
+            font-family: en;
+        }
+    }
+}

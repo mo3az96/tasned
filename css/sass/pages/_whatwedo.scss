@@ -1,0 +1,19 @@
+.whatwedo-main {
+    .main {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 5fr 6fr;
+        align-items: center;
+        padding: 150px 0 25px;
+        position: relative;
+
+        @include sm {
+            display: flex;
+            grid-template-columns: unset;
+            padding: 100px 0 130px;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column-reverse;
+        }
+    }
+}

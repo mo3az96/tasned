@@ -1,0 +1,63 @@
+body {
+    position: relative;
+    font-weight: 400;
+    background-color: $back;
+    overflow-x: hidden;
+
+    @include rtl {
+        font-family: ar;
+    }
+
+    @include ltr {
+        font-family: en;
+    }
+
+    &.light-mode {
+        background-color: #fff;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: $main $back;
+
+    ::-webkit-scrollbar {
+        background-color: $back;
+        width: 7px;
+        height: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $main;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.overflow {
+    overflow: hidden !important;
+}
+
+* {
+    outline: none !important;
+}
+
+@media (min-width:1300px) {
+    .container {
+        max-width: 1296px
+    }
+}
+
+@media (min-width:1850px) {
+    .container-fluid {
+        max-width: 1810px;
+    }
+}

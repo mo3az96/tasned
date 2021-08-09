@@ -1,0 +1,391 @@
+.main-about-section {
+    padding: 290px 0 0;
+    background-color: #fff;
+
+    @include lg {
+        padding: 150px 0 0;
+    }
+}
+
+.main-about-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    padding-bottom: 195px;
+
+    @include lg {
+        padding-bottom: 80px;
+    }
+
+    @include lg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: unset;
+        grid-template-columns: unset;
+        text-align: center;
+    }
+}
+
+.main-about-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: $text;
+    line-height: 1.2;
+
+    @include rtl {
+        font-size: 55px;
+    }
+
+    @include lg {
+        font-size: 30px;
+        margin-bottom: 15px;
+
+        @include rtl {
+            font-size: 48px;
+        }
+    }
+}
+
+
+.bold-text {
+    font-weight: 600;
+    color: $text;
+    font-size: 25px;
+    margin: 0 0 35px;
+    line-height: 1.92;
+
+    @include rtl {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    @include lg {
+        font-size: 16px;
+        margin: 0 0 16px;
+
+        @include rtl {
+            font-size: 25px;
+        }
+    }
+}
+
+.reg-text {
+    font-weight: 400;
+    margin-bottom: 0;
+    color: $text;
+    font-size: 25px;
+    line-height: 1.92;
+
+    @include rtl {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    @include lg {
+        font-size: 16px;
+
+        @include rtl {
+            font-size: 25px;
+        }
+    }
+}
+
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 194px;
+
+    @include lg {
+        padding-bottom: 80px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px 0;
+    }
+}
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .number {
+        font-weight: 300;
+        color: $main;
+        font-size: 100px;
+        line-height: 57px;
+
+        @include rtl {
+            font-size: 150px;
+        }
+
+        @include lg {
+            font-size: 52px;
+            height: 57px;
+
+            @include rtl {
+                font-size: 60px;
+            }
+        }
+    }
+
+    .statistic-text {
+        color: $text;
+        font-size: 22px;
+        font-weight: 600;
+        margin: 55px 0 0;
+
+        @include rtl {
+            font-size: 30px;
+        }
+
+        @include lg {
+            font-size: 16px;
+            margin: 10px 0 0;
+
+            @include rtl {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.video-cont {
+    padding-bottom: 150px;
+    background-color: #fff;
+
+    @include lg {
+        padding-bottom: 85px;
+    }
+}
+
+.video-fancy {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+        opacity: 0.3;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $text;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 150px;
+        color: #fff;
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+
+        @include lg {
+            font-size: 60px;
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            color: $main;
+        }
+    }
+}
+
+.about-partners {
+    padding: 0 0 135px;
+    background-color: #fff;
+
+    @include lg {
+        padding: 0 0 80px;
+    }
+
+    .partners-fluid {
+        padding: 0;
+    }
+}
+
+.our-team-section {
+    padding-top: 180px;
+    padding-bottom: 210px;
+
+    @include lg {
+        padding-top: 80px;
+        padding-bottom: 130px;
+    }
+}
+
+.our-team-head {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    margin-bottom: 90px;
+
+    @include lg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: unset;
+        grid-template-columns: unset;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.our-team-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: $text;
+
+    @include rtl {
+        font-size: 48px;
+        line-height: 46px;
+    }
+
+    @include lg {
+        font-size: 30px;
+        margin-bottom: 15px;
+
+        @include rtl {
+            font-size: 45px;
+            line-height: 46px;
+        }
+    }
+}
+
+.our-team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 69px;
+
+    @include lg {
+        gap: 30px;
+    }
+
+    @include xs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 15px;
+    }
+}
+
+.team-member {
+    .member-img {
+        padding-bottom: 122.641509434%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .member-name {
+        display: block;
+        font-size: 20px;
+        color: $text;
+        font-weight: 700;
+        margin-top: 19px;
+        margin-bottom: 2px;
+
+        @include rtl {
+            font-size: 32px;
+            line-height: 32px;
+        }
+
+        @include lg {
+            font-size: 14px;
+            margin-top: 10px;
+
+            @include rtl {
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .member-postion {
+        font-size: 16px;
+
+        @include rtl {
+            font-size: 22px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+
+        @include lg {
+            font-size: 12px;
+
+            @include rtl {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.join-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+
+    @include lg {
+        margin-top: 40px;
+    }
+}
+
+.join-link {
+    color: $main;
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    @include rtl {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    &::after {
+        height: 2px;
+        width: 100%;
+        background-color: $main;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        color: $text;
+        text-decoration: none;
+
+        &::after {
+            transform: scaleX(0);
+        }
+    }
+}

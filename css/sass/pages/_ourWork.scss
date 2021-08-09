@@ -1,0 +1,55 @@
+.our-work-page {
+    padding-top: 305px;
+    padding-bottom: 115px;
+
+    @include md {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+}
+
+.our-work-title {
+    font-size: 48px;
+    color: $text;
+    line-height: 1.354;
+    font-weight: 300;
+    width: 1085px;
+
+    strong {
+        font-weight: 900;
+        border-bottom: 2px solid $text;
+    }
+
+    @include md {
+        width: 100%;
+        font-size: 27px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    @include rtl {
+        font-size: 100px;
+        line-height: 100px;
+
+        @include md {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+}
+
+.our-work-section {
+    margin-top: 150px;
+
+    @include md {
+        margin-top: 50px;
+    }
+
+    ~.testmonials-section {
+        margin-top: 100px;
+
+        @include md {
+            margin-top: 70px;
+        }
+    }
+}

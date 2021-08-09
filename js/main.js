@@ -95,6 +95,64 @@ $(document).ready(function () {
             numbers(700)
         }
     });
+
+    //////////** scope slider **//////////
+    var scopeswiper = new Swiper('.scope-slider .swiper-container', {
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                loop: true,
+            },
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 23,
+            },
+            1199: {
+                slidesPerView: 4,
+                spaceBetween: 90,
+            },
+        },
+        pagination: {
+            el: '.scope-slider .swiper-pagination',
+            clickable: true,
+        },
+    });
+    //////////** lg slider **//////////
+    var lgswiper = new Swiper('.lg-design-slider .swiper-container', {
+        spaceBetween: 50,
+        autoplay: {
+            delay: 5000,
+        },
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: '.lg-design-slider .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 1.552,
+            },
+        },
+    });
+    //////////** xs slider **//////////
+    var xsswiper = new Swiper('.xs-design-slider .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        autoplay: {
+            delay: 5000,
+        },
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            nextEl: '.xs-design-slider .swiper-btn-next',
+            prevEl: '.xs-design-slider .swiper-btn-prev',
+        },
+    });
 });
 
 var a = 0;

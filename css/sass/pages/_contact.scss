@@ -1,0 +1,262 @@
+.contact-page {
+    padding-top: 260px;
+    background-color: #fff;
+
+    @include md {
+        padding-top: 150px;
+    }
+}
+
+.contact-content {
+    margin-bottom: 200px;
+
+    @include md {
+        margin-bottom: 110px;
+    }
+}
+
+.contact-head {
+    margin-bottom: 103px;
+
+    @include md {
+        margin-bottom: 40px;
+    }
+
+    @include rtl {
+        margin-bottom: 75px;
+
+        @include md {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.contact-title {
+    color: $text;
+    line-height: 1.25;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 0 10px;
+
+    @include md {
+        text-align: center;
+    }
+
+    @include sm {
+        font-size: 27px;
+    }
+
+    @include rtl {
+        font-size: 80px;
+        line-height: 80px;
+
+        @include sm {
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+}
+
+.contact-subtitle {
+    color: $text;
+    line-height: 1.25;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 0;
+
+    @include md {
+        text-align: center;
+    }
+
+    @include sm {
+        font-size: 27px;
+    }
+
+    @include rtl {
+        font-size: 80px;
+        line-height: 80px;
+
+        @include sm {
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+}
+
+.contact-methods {
+    &.xs-contact-methods {
+        display: none;
+    }
+
+    @include md {
+        display: none;
+
+        &.xs-contact-methods {
+            display: block;
+            margin-top: 85px;
+        }
+    }
+}
+
+.methods-title {
+    font-size: 14px;
+    color: $text;
+    margin: 0 0 12px;
+
+    @include md {
+        text-align: center;
+    }
+
+    @include rtl {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include rtl {
+        margin-bottom: 40px;
+    }
+
+    @include md {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    @include xs {
+        flex-direction: column;
+
+        &.contacts-social {
+            flex-direction: row;
+        }
+    }
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+    a {
+        font-size: 22px;
+        color: $text;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: $main;
+            text-decoration: none;
+        }
+
+        @include rtl {
+            margin-left: 57px;
+            font-size: 35px;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            @include xs {
+                margin-left: 0;
+            }
+        }
+
+        @include ltr {
+            margin-right: 57px;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            @include xs {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .contact-social {
+        font-size: 30px;
+
+        @include rtl {
+            margin-left: 47px;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            @include md {
+                margin: 0;
+                margin-left: 35px;
+            }
+        }
+
+        @include ltr {
+            margin-right: 47px;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            @include md {
+                margin: 0;
+                margin-right: 35px;
+            }
+        }
+    }
+}
+
+.contact-form {
+    .form-group {
+        text-align: unset;
+
+        @include md {
+            text-align: center;
+        }
+    }
+
+    .form-control {
+        text-align: unset;
+
+        @include md {
+            text-align: center;
+        }
+    }
+
+    .form-submit {
+        @include rtl {
+            margin-right: 0;
+            margin-left: auto;
+
+            @include md {
+                margin-right: auto;
+            }
+        }
+
+        @include ltr {
+            margin-right: auto;
+            margin-left: 0;
+
+            @include md {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.contact-map {
+    width: 100%;
+    height: 320px;
+
+    #contact-map {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include sm {
+        display: none;
+    }
+}

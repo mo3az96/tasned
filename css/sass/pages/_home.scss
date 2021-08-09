@@ -1,0 +1,627 @@
+///////////// main
+main {
+    position: relative;
+    overflow: hidden;
+
+    .stars {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: blinker 5s linear infinite;
+        z-index: -1;
+        max-width: 100%;
+
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+    padding: 150px 0 25px;
+    position: relative;
+
+    @include sm {
+        display: flex;
+        grid-template-columns: unset;
+        padding: 100px 0 130px;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+}
+
+.main-text {
+    @include rtl {
+        padding-left: 35px;
+    }
+
+    @include ltr {
+        padding-right: 35px;
+    }
+
+    @include sm {
+        text-align: center;
+
+        @include rtl {
+            padding-left: 0;
+        }
+
+        @include ltr {
+            padding-right: 0;
+        }
+
+        .get-quote {
+            margin: auto;
+        }
+    }
+}
+
+
+.main-title {
+    color: #fff;
+    font-size: 3.15vw;
+    line-height: 1.2;
+    font-weight: 800;
+    margin: 0 0 45px;
+
+    @include rtl {
+        line-height: 1;
+        font-size: 4.5vw;
+    }
+
+    @include xxl {
+        font-size: 60px;
+
+        @include rtl {
+            font-size: 90px;
+        }
+    }
+
+    @include md {
+        font-size: 30px;
+        margin: 0 0 40px;
+
+        @include rtl {
+            font-size: 40px;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    @include xxs {
+        font-size: 24px;
+        margin: 0 0 40px;
+
+        @include rtl {
+            font-size: 30px;
+        }
+    }
+
+    // @include xxs {
+    //     font-size: 24px;
+    //     margin: 0 0 15px;
+    // }
+
+    // @include height {
+    //     font-size: 24px;
+    //     margin: 0 0 15px;
+    // }
+}
+
+.main-paragraph {
+    font-size: 1.5vw;
+    color: #fff;
+    line-height: 1.429;
+    margin: 0 0 59px;
+
+    @include rtl {
+        line-height: 1.091;
+    }
+
+    @include xxl {
+        font-size: 28px;
+
+        @include rtl {
+            font-size: 44px;
+        }
+    }
+
+    @include md {
+        font-size: 24px;
+        margin: 0 0 55px;
+    }
+
+    @include hw {
+        font-size: 26px;
+        margin: 0 0 55px;
+    }
+
+    @include xxs {
+        font-size: 18px;
+        margin: 0 0 35px;
+    }
+
+    @include height {
+        font-size: 18px;
+        margin: 0 0 35px;
+    }
+
+    @include sm {
+        display: none;
+    }
+}
+
+.main-img {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    animation-name: fly;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    @include rtl {
+        padding-left: 15px;
+    }
+
+    @include ltr {
+        padding-right: 15px;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    @include sm {
+        height: 300px;
+        margin-bottom: 20px;
+
+        @include rtl {
+            padding-left: 0;
+        }
+
+        @include ltr {
+            padding-right: 0;
+        }
+    }
+
+    @include height {
+        display: none;
+    }
+}
+
+.scroll-btn {
+    width: 26px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    display: block;
+
+    @include lg {
+        display: block;
+        bottom: 50px;
+        height: 50px;
+        width: 27.5px;
+        border-radius: 14px;
+    }
+
+    span {
+        width: 2px;
+        background-color: #fff;
+        height: 12px;
+        display: block;
+        margin: auto;
+        position: relative;
+        animation-name: scr-pos;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $main;
+
+        span {
+            background-color: $main;
+        }
+    }
+}
+
+///////////// partners
+.partners-section {
+    padding: 100px 33px 0;
+
+    @include lg {
+        padding: 30px 15px 0;
+    }
+}
+
+.partners-fluid {
+    background-color: #fff;
+    padding: 120px 0 130px;
+
+    @include lg {
+        padding: 60px 0 68px;
+    }
+}
+
+.partners-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+
+    @include lg {
+        display: flex;
+        gap: unset;
+        grid-template-columns: unset;
+        flex-direction: column;
+    }
+}
+
+.partners-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: $text;
+    margin: 60px 0 0;
+
+    @include rtl {
+        font-size: 48px;
+        line-height: 46px;
+    }
+
+    @include lg {
+        margin: 0 0 30px;
+        text-align: center;
+    }
+}
+
+///////////// services
+.services-section {
+    padding-top: 160px;
+    overflow: hidden;
+
+    @include md {
+        padding-top: 60px;
+    }
+}
+
+.services-title {
+    font-size: 36px;
+    color: #ffffff;
+    line-height: 1.444;
+    width: 990px;
+    margin: 0 auto 65px;
+    text-align: center;
+    font-weight: 400;
+
+    @include rtl {
+        font-size: 48px;
+        line-height: 1.083;
+
+        @include md {
+            font-size: 36px;
+        }
+    }
+
+    @include md {
+        width: 100%;
+        margin: 0 0 30px;
+        font-size: 24px;
+    }
+}
+
+.services-footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include md {
+        flex-direction: column-reverse;
+    }
+}
+
+.services-img {
+    margin: 0 20px;
+    max-width: 37%;
+
+    @include rtl {
+        transform: scaleX(-1);
+    }
+
+    @include md {
+        max-width: 100%;
+        margin: 55px 0 0;
+    }
+}
+
+.services-text {
+    padding: 0 60px;
+    width: 850px;
+
+    @include md {
+        width: 100%;
+        padding: 0;
+        margin-top: 90px;
+        text-align: center;
+
+        .get-quote {
+            margin: auto;
+        }
+    }
+
+    p {
+        margin: 0 0 57px;
+        line-height: 1.444;
+        color: $sec;
+        font-size: 36px;
+        font-weight: 700;
+
+        @include rtl {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 52px;
+        }
+
+        @include md {
+            font-size: 24px;
+            margin: 0 0 50px;
+
+            @include rtl {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+.light-pattern {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @include rtl {
+        left: 0;
+        transform: scaleX(-1) translateY(-50%);
+
+        @include xxl {
+            left: 8.5%;
+        }
+    }
+
+    @include ltr {
+        right: 0;
+
+        @include xxl {
+            right: 8.5%;
+        }
+    }
+
+    @include lg {
+        display: none;
+    }
+}
+
+///////////// works
+.works-section {
+    padding: 0 33px 0;
+
+    @include md {
+        padding: 0 15px 0;
+    }
+}
+
+.works-fluid {
+    background-color: #fff;
+    padding: 180px 0 115px;
+
+    @include md {
+        padding: 65px 0 90px;
+    }
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    @include md {
+        margin: 0 0 35px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 48px;
+    color: $text;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include rtl {
+        font-size: 72px;
+        font-weight: 900;
+    }
+
+    @include md {
+        font-size: 30px;
+
+        @include rtl {
+            font-size: 50px;
+        }
+    }
+}
+
+.section-link {
+    font-size: 20px;
+    color: $text;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    @include rtl {
+        font-size: 34px;
+        font-weight: 500;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $text;
+        content: "";
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+        color: $main;
+        text-decoration: none;
+
+        &::after {
+            transform: scaleX(0);
+        }
+    }
+
+    @include md {
+        display: none;
+    }
+}
+
+.all-link-xs {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    @include md {
+        display: flex;
+
+        .section-link {
+            display: inline-block;
+        }
+    }
+}
+
+
+///////////// works
+.testmonials-fluid {
+    position: relative;
+    padding-top: 192px;
+    padding-bottom: 162px;
+
+    @include md {
+        padding: 85px 0 0;
+    }
+}
+
+.testmonials-content {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 30px;
+
+    @include md {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+        gap: unset;
+    }
+}
+
+.testmonials-section {
+    overflow: hidden;
+    background-color: $text;
+}
+
+.testmonials-img {
+    position: absolute;
+    bottom: 0;
+    max-width: 39%;
+
+    @include rtl {
+        left: 55px;
+        transform: scaleX(-1);
+    }
+
+    @include ltr {
+        right: 55px;
+    }
+
+    @include md {
+        position: relative;
+        bottom: auto;
+        max-width: 100%;
+        margin-top: 50px;
+
+        @include rtl {
+            left: auto;
+        }
+
+        @include ltr {
+            right: auto;
+        }
+    }
+}
+
+.testmonials-slider {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.testmonials-title {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 40px;
+
+    @include rtl {
+        font-size: 48px;
+    }
+
+    @include md {
+        font-size: 26px;
+        text-align: center;
+        margin: 0 0 44px;
+
+        @include rtl {
+            font-size: 40px;
+        }
+    }
+}
+
+///////////// works
+.blog-section {
+    padding: 0 33px 0;
+
+    @include md {
+        padding: 0 15px;
+    }
+}
+
+.blog-fluid {
+    background-color: #fff;
+    padding: 180px 0 140px;
+
+    @include md {
+        padding: 75px 0 80px;
+    }
+}
